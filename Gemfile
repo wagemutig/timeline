@@ -2,6 +2,6 @@ source 'https://rubygems.org'
 
 gem 'sinatra'
 
-group :development, do
+group :development do
   gem 'haml'
 end
