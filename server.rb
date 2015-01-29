@@ -3,8 +3,15 @@ require 'haml'
 
 class TL < Sinatra::Base
 
+set :views, settings.root + '/app/views/'
+set :public_dir, settings.root + '/app/public'
+
 get '/' do
-  'Hello Sinatra'
+  redirect to('/timeline')
+end
+
+get '/timeline' do
+  haml :timeline
 end
 
   #start the server if ruby file executed directly
