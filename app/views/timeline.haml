@@ -4,35 +4,38 @@
 
 %main
   %ul.timeline
-    %li.timeline-section
+    %div.timeline__line
+    %li.timeline__section
       %a{:href => "#"}
         Gestalterische Berufsmatura
-    %ul.section-projects
-      %li.project
-        %a{:href => "#"}
-          Buch Zeitgeist 3D-Druck
-      %li.project
-        %a{:href => "/gbm/corporate-design-fazenda-aguacu"}
-          Corporate Design Fazenda Agua&ccedil;u
+      %ul.timeline__projects
+        %li.project
+          %a{:href => "#"}
+            Buch Zeitgeist 3D-Druck
+        %li.project
+          %a{:class => "project__link", :href => "/gbm/corporate-design-fazenda-aguacu"}
+            %div.project__unsemanticTitleWrapper
+              %h3.project__title Corporate Design Fazenda Agua&ccedil;u
+            %div.project__bullet
 
-    %li.timeline-section
+    %li.timeline__section
       %a{:href => "#"}
         Internship on-IDLE in London
-    %ul.section-projects
-      %li.project
-        %a{:href => "#"}
-          Infografiken Migros Aare
-      %li.project
-        %a{:href => "#"}
-          Logo Lightbox Solutions
+      %ul.timeline__projects
+        %li.project
+          %a{:href => "#"}
+            Infografiken Migros Aare
+        %li.project
+          %a{:href => "#"}
+            Logo Lightbox Solutions
 
-    %li.timeline-section
+    %li.timeline__section
       %a{:href => "#"}
         Makers Academy in London
-    %ul.section-projects
-      %li.project
-        %a{:href => "#"}
-          Lecture Voter
-      %li.project
-        %a{:href => "#"}
-          Node-Rover
+      %ul.timeline__projects
+        %li.project
+          %a{:href => "#"}
+            Lecture Voter
+        %li.project
+          %a{:href => "#"}
+            Node-Rover
