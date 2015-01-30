@@ -47,7 +47,7 @@ img {
 header {
 
   text-align: center;
-  padding: 3rem 0 0 0;
+  padding: 3rem 0 4rem 0;
 
 }
 
@@ -80,6 +80,13 @@ header h2 {
   display: block;
   color: white;
   padding: 0 0 7rem 0;
+
+}
+
+.timeline__section_title {
+
+  float: left;
+  margin: 1rem 0 0 1rem;
 
 }
 
