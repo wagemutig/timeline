@@ -2,6 +2,12 @@
     Global
 --------------------------------- */
 
+*, *:before, *:after {
+
+  box-sizing: border-box;
+
+}
+
 html, body {
 
   padding: 0;
@@ -72,6 +78,13 @@ header h2 {
     Timeline
 --------------------------------- */
 
+.timeline {
+
+  overflow: hidden;
+  position: relative;
+
+}
+
 .timeline__section {
 
   width: 100%;
@@ -108,11 +121,45 @@ header h2 {
 
 }
 
-.timeline__projects {
+.timeline__projects,
+.timeline__line {
 
+  padding: 2rem;
   margin: 0 auto;
   display: block;
   max-width: 800px;
+
+}
+
+.timeline__line {
+
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+}
+
+.timeline__line:after {
+
+  content: '';
+  width: 4px;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  top: 0;
+  left: calc(60% + 50px - 2px + 2.5rem - 6px);
+  /* calc(<width of unsemanticTitleWrapper> + <left of :after (bullet)> - <width of bullet/2> + <line/2>
+   * - <padding of parent element>) */
+
+}
+
+.timeline__unsemanticLineWrapper {
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 
 }
 
@@ -159,6 +206,24 @@ header h2 {
   top: 50%;
   left: 50px;
   margin: -2.5rem 0 0 0;
+
+}
+
+.project--gbm {
+
+  background-color: rgb(235, 203, 23);
+
+}
+
+.project--oi {
+
+  background-color: rgb(132, 191, 198);
+
+}
+
+.project--ma {
+
+  background-color: rgb(233, 110, 76);
 
 }
 

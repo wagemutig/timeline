@@ -4,17 +4,18 @@
 
 %main
   %ul.timeline
-    %div.timeline__line
+    %div.timeline__unsemanticLineWrapper
+      %div.timeline__line
     %li.timeline__section.timeline__section--gbm
       %a{:href => "#", :class => "timeline__section_title"}
         Gestalterische Berufsmatura
       %ul.timeline__projects
-        %li.project
+        %li.project.project--gbm
           %a{:class => "project__link", :href => "/gbm/zeitgeist"}
             %div.project__unsemanticTitleWrapper
               %h3.project__title Buch &laquo;Zeitgeist 3D-Druck&raquo;
             %div.project__bullet
-        %li.project
+        %li.project.project--gbm
           %a{:class => "project__link", :href => "/gbm/aguacu"}
             %div.project__unsemanticTitleWrapper
               %h3.project__title Corporate Design Fazenda Agua&ccedil;u
@@ -24,12 +25,12 @@
       %a{:href => "#", :class => "timeline__section_title"}
         Internship on-IDLE in London
       %ul.timeline__projects
-        %li.project
+        %li.project.project--oi
           %a{:class => "project__link", :href => "/oi/migros"}
             %div.project__unsemanticTitleWrapper
               %h3.project__title Infografiken Migros Aare
             %div.project__bullet
-        %li.project
+        %li.project.project--oi
           %a{:class => "project__link", :href => "/oi/lightbox"}
             %div.project__unsemanticTitleWrapper
               %h3.project__title Logo Lightbox Solutions
@@ -39,12 +40,12 @@
       %a{:href => "#", :class => "timeline__section_title"}
         Makers Academy in London
       %ul.timeline__projects
-        %li.project
+        %li.project.project--ma
           %a{:class => "project__link", :href => "/ma/lecture-voter"}
             %div.project__unsemanticTitleWrapper
               %h3.project__title Lecture Voter
             %div.project__bullet
-        %li.project
+        %li.project.project--ma
           %a{:class => "project__link", :href => "/ma/node-rover"}
             %div.project__unsemanticTitleWrapper
               %h3.project__title Node-Rover
