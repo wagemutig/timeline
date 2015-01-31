@@ -14,7 +14,7 @@ get '/timeline' do
   haml :timeline
 end
 
-get '/gbm/corporate-design-fazenda-aguacu' do
+get '/gbm/aguacu' do
   haml :aguacu
 end
 
