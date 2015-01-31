@@ -144,7 +144,7 @@ header h2 {
   background-color: white;
   position: absolute;
   top: 50%;
-  left: 5%;
+  left: 15px;
 
 }
 
@@ -157,7 +157,7 @@ header h2 {
   border-radius: 100%;
   position: absolute;
   top: 50%;
-  left: 25%;
+  left: 50px;
   margin: -2.5rem 0 0 0;
 
 }
