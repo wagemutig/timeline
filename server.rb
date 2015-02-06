@@ -4,7 +4,7 @@ require 'haml'
 class TL < Sinatra::Base
 
 set :views, settings.root + '/app/views/'
-set :public_dir, settings.root + '/app/public'
+set :public_dir, settings.root + '/app/public/'
 
 get '/' do
   redirect to('/timeline')

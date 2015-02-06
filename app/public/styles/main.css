@@ -14,14 +14,13 @@ html, body {
   margin: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
 
 }
 
 html {
 
   font-family: effra, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 0.8px;
 
 }
@@ -39,7 +38,7 @@ body a {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
 
 }
 
@@ -64,7 +63,6 @@ img {
 header {
 
   text-align: center;
-  padding: 3rem 0 4rem 0;
 
 }
 
@@ -74,6 +72,7 @@ header h1 {
   font-size: 2.5rem;
   line-height: 2.8rem;
   letter-spacing: 0.3px;
+  margin: 4rem 0 0 0;
 
 }
 
@@ -87,9 +86,11 @@ header h2 {
 
 .close__project {
 
-  float: right;
-  margin: 0 2rem 0 0;
+  margin: 0 1rem 0 0;
   font-size: 4rem;
+  position: absolute;
+  top: 0;
+  right: 0;
 
 }
 
@@ -102,6 +103,7 @@ header h2 {
 
   overflow: hidden;
   position: relative;
+  padding: 3rem 0 0 0;
 
 }
 
@@ -286,14 +288,14 @@ header h2 {
 
 .section__image {
 
-  max-width: 50%;
-  margin: 0 3rem 0 3rem;
+  max-width: 70%;
+  margin: 3rem auto 3rem auto;
 
 }
 
 .project__unsemanticImageWrapper {
 
-  height: 300px;
+  height: 15rem;
   overflow: hidden;
   margin: 3rem 0 0 0;
   position: relative;
@@ -303,31 +305,25 @@ header h2 {
 .project__cover {
 
   width: 100%;
-  transform: translateZ(-1px) scale(2);
+  transform: translateZ(-1px) scale(1);
   position: absolute;
-  top: -700px;
+  bottom: 0;
 
 }
 
 .project__article {
 
-  margin: 3rem;
+  margin-top: 3rem;
+  margin-left: 20vw;
   text-align: left;
 
 }
 
-.article__title {
-
-  font-weight: 700;
-  font-size: 1.4rem;
-  padding: 0 0 0.2rem 0;
-
-}
 
 .article__paragraph {
 
-  line-height: 1.4rem;
-  width: 20rem;
+  line-height: 1.6rem;
+  width: 50vw;
 
 }
 
@@ -340,7 +336,38 @@ header h2 {
 .section__title {
 
   font-weight: 700;
-  font-size: 1.4rem;
-  padding: 0 0 0.2rem 0;
+  font-size: 1.6rem;
+  padding: 3rem 0 1rem 0; 
+
+}
+
+
+/* ---------------------------------
+    Media Queries
+--------------------------------- */
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+
+.project__cover {
+
+  bottom: 60;
+  transform: translateZ(-1px) scale(2);
+
+}
+
+.section__image {
+
+  max-width: 95%;
+
+}
+
+.project__paragraph {
+
+  width: 80vw; 
+  
+
+}
 
 }
