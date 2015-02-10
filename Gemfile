@@ -4,4 +4,6 @@ gem 'sinatra'
 
 group :development do
   gem 'haml'
+  gem 'sass'
+  gem 'compass'
 end
