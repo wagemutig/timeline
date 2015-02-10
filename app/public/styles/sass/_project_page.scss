@@ -1,0 +1,89 @@
+/* ---------------------------------
+    Project Page
+--------------------------------- */
+
+.section__image {
+
+  max-width: 70%;
+  margin: 3rem auto 3rem auto;
+
+}
+
+.project__unsemanticImageWrapper {
+
+  height: 15rem;
+  overflow: hidden;
+  margin: 3rem 0 0 0;
+  position: relative;
+
+}
+
+.project__cover {
+
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+
+}
+
+.project__article {
+
+  margin-left: 20vw;
+  text-align: left;
+
+}
+
+
+.article__paragraph {
+
+  line-height: 1.6rem;
+  width: 50vw;
+
+}
+
+.project__section {
+
+  margin: 3rem 0;
+
+}
+
+.section__title {
+
+  font-weight: 700;
+  font-size: 1.6rem;
+  padding: 3rem 0 1rem 0; 
+
+}
+
+#cover__zeitgeist {
+}
+
+#cover__aguacu {
+
+  bottom: -3vw;
+
+}
+
+#cover__migros {
+
+  bottom: -33vw;
+
+}
+
+#cover__lightbox {
+
+  bottom: -16vw;
+
+}
+
+#cover__lecture-voter {
+
+  bottom: -26vw;
+
+}
+
+#cover__node-rover {
+
+  bottom:-37vw;
+
+}

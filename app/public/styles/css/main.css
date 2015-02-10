@@ -1,0 +1,360 @@
+/* ---------------------------------
+    Global
+--------------------------------- */
+/* line 5, ../sass/_global.scss */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* line 11, ../sass/_global.scss */
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 20, ../sass/_global.scss */
+html {
+  font-family: effra, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.8px;
+}
+
+/* line 28, ../sass/_global.scss */
+body a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* line 35, ../sass/_global.scss */
+.project__unsemanticContentWrapper {
+  perspective: 1px;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* line 45, ../sass/_global.scss */
+main {
+  margin: 0 auto;
+}
+
+/* line 51, ../sass/_global.scss */
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* ---------------------------------
+    Header
+--------------------------------- */
+/* line 5, ../sass/_header.scss */
+header {
+  text-align: center;
+}
+
+/* line 11, ../sass/_header.scss */
+header h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 2.8rem;
+  letter-spacing: 0.3px;
+  margin: 4rem 0 0 0;
+}
+
+/* line 21, ../sass/_header.scss */
+header h2 {
+  font-size: 1.4rem;
+  font-weight: 100;
+  line-height: 2.5rem;
+}
+
+/* line 29, ../sass/_header.scss */
+.close__project {
+  margin: 0 1rem 0 0;
+  font-size: 4rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* ---------------------------------
+    Timeline
+--------------------------------- */
+/* line 5, ../sass/_timeline.scss */
+.timeline {
+  overflow: hidden;
+  position: relative;
+  padding: 3rem 0 0 0;
+}
+
+/* line 13, ../sass/_timeline.scss */
+.timeline__section {
+  width: 100%;
+  height: auto;
+  float: left;
+  display: block;
+  color: white;
+  padding: 0 0 7rem 0;
+}
+
+/* line 24, ../sass/_timeline.scss */
+.timeline__section_title {
+  float: left;
+  margin: 1rem 0 0 1rem;
+}
+
+/* line 31, ../sass/_timeline.scss */
+.timeline__section--gbm {
+  background-color: #ebcb17;
+}
+
+/* line 37, ../sass/_timeline.scss */
+.timeline__section--oi {
+  background-color: #84bfc6;
+}
+
+/* line 43, ../sass/_timeline.scss */
+.timeline__section--ma {
+  background-color: #e96e4c;
+}
+
+/* line 49, ../sass/_timeline.scss */
+.timeline__projects,
+.timeline__line {
+  padding: 2rem;
+  margin: 0 auto;
+  display: block;
+  max-width: 800px;
+}
+
+/* line 59, ../sass/_timeline.scss */
+.timeline__line {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 67, ../sass/_timeline.scss */
+.timeline__line:after {
+  content: '';
+  width: 4px;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  top: 0;
+  left: calc(60% + 50px - 2px + 2.5rem - 6px);
+  /* calc(<width of unsemanticTitleWrapper> + <left of :after (bullet)> - <width of bullet/2> + <line/2>
+   * - <padding of parent element>) */
+}
+
+/* line 81, ../sass/_timeline.scss */
+.timeline__unsemanticLineWrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* line 91, ../sass/_timeline.scss */
+.project {
+  width: 100%;
+  display: block;
+  float: left;
+  min-height: 5rem;
+  position: relative;
+  margin: 5rem 0 0 0;
+}
+
+/* line 102, ../sass/_timeline.scss */
+.project__bullet {
+  float: left;
+  width: 40%;
+  height: 100%;
+  position: relative;
+}
+
+/* line 111, ../sass/_timeline.scss */
+.project__bullet:before {
+  content: '';
+  width: 1.5rem;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+}
+
+/* line 123, ../sass/_timeline.scss */
+.project__bullet:after {
+  content: '';
+  width: 5rem;
+  height: 5rem;
+  border: 4px solid white;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  margin: -2.5rem 0 0 0;
+}
+
+/* line 137, ../sass/_timeline.scss */
+.project--gbm {
+  background-color: #ebcb17;
+}
+
+/* line 143, ../sass/_timeline.scss */
+.project--oi {
+  background-color: #84bfc6;
+}
+
+/* line 149, ../sass/_timeline.scss */
+.project--ma {
+  background-color: #e96e4c;
+}
+
+/* line 155, ../sass/_timeline.scss */
+.project__unsemanticTitleWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+  float: left;
+}
+
+/* line 167, ../sass/_timeline.scss */
+.project__title {
+  display: block;
+  text-align: right;
+  float: left;
+  width: 9rem;
+  line-height: 1.4rem;
+}
+
+/* line 177, ../sass/_timeline.scss */
+.project__link {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  display: block;
+}
+
+/* ---------------------------------
+    Project Page
+--------------------------------- */
+/* line 5, ../sass/_project_page.scss */
+.section__image {
+  max-width: 70%;
+  margin: 3rem auto 3rem auto;
+}
+
+/* line 12, ../sass/_project_page.scss */
+.project__unsemanticImageWrapper {
+  height: 15rem;
+  overflow: hidden;
+  margin: 3rem 0 0 0;
+  position: relative;
+}
+
+/* line 21, ../sass/_project_page.scss */
+.project__cover {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+/* line 29, ../sass/_project_page.scss */
+.project__article {
+  margin-left: 20vw;
+  text-align: left;
+}
+
+/* line 37, ../sass/_project_page.scss */
+.article__paragraph {
+  line-height: 1.6rem;
+  width: 50vw;
+}
+
+/* line 44, ../sass/_project_page.scss */
+.project__section {
+  margin: 3rem 0;
+}
+
+/* line 50, ../sass/_project_page.scss */
+.section__title {
+  font-weight: 700;
+  font-size: 1.6rem;
+  padding: 3rem 0 1rem 0;
+}
+
+/* line 61, ../sass/_project_page.scss */
+#cover__aguacu {
+  bottom: -3vw;
+}
+
+/* line 67, ../sass/_project_page.scss */
+#cover__migros {
+  bottom: -33vw;
+}
+
+/* line 73, ../sass/_project_page.scss */
+#cover__lightbox {
+  bottom: -16vw;
+}
+
+/* line 79, ../sass/_project_page.scss */
+#cover__lecture-voter {
+  bottom: -26vw;
+}
+
+/* line 85, ../sass/_project_page.scss */
+#cover__node-rover {
+  bottom: -37vw;
+}
+
+/* ---------------------------------
+    Mockups
+--------------------------------- */
+/* line 5, ../sass/_mockups.scss */
+.unsemanticMocksWrapper {
+  background-color: grey;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* line 14, ../sass/_mockups.scss */
+.section__mock {
+  background-color: white;
+}
+
+/* ---------------------------------
+    Media Queries
+--------------------------------- */
+@media all and (max-width: 900px) {
+  /* line 12, ../sass/_media_queries.scss */
+  .section__image {
+    max-width: 95%;
+  }
+
+  /* line 18, ../sass/_media_queries.scss */
+  .project__article {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+  }
+
+  /* line 26, ../sass/_media_queries.scss */
+  .article__paragraph {
+    width: 80vw;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

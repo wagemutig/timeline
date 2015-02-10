@@ -1,0 +1,32 @@
+/* ---------------------------------
+    Media Queries
+--------------------------------- */
+
+@media all and (max-width: 900px) {
+
+.project__cover {
+
+
+}
+
+.section__image {
+
+  max-width: 95%;
+
+}
+
+.project__article {
+
+  margin-left: auto;
+  margin-right: auto;
+  width: 80vw;
+
+}
+
+.article__paragraph {
+
+  width: 80vw; 
+
+}
+
+}
