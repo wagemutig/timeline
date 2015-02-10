@@ -305,7 +305,7 @@ header h2 {
 .project__cover {
 
   width: 100%;
-  transform: translateZ(-1px) scale(1);
+  transform: translateZ(-1px) scale(2);
   position: absolute;
   bottom: 0;
 
@@ -343,6 +343,26 @@ header h2 {
 
 
 /* ---------------------------------
+    Mockups
+--------------------------------- */
+
+.unsemanticMocksWrapper {
+
+  background-color: grey;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
+
+}
+
+.section__mock {
+
+  background-color: white;
+
+}
+
+
+/* ---------------------------------
     Media Queries
 --------------------------------- */
 
@@ -352,8 +372,6 @@ and (max-device-width : 1024px) {
 
 .project__cover {
 
-  bottom: 60;
-  transform: translateZ(-1px) scale(2);
 
 }
 
@@ -371,3 +389,4 @@ and (max-device-width : 1024px) {
 }
 
 }
+
