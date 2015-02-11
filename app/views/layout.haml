@@ -3,10 +3,12 @@
   %head
     %title Colin Schmid – Portfolio ZHdK
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
-    %link{:href => "../styles/reset.css", :media => "screen", :rel => "stylesheet"}/
-    %link{:href => "../styles/main.css", :media => "screen", :rel => "stylesheet"}/
-    %script{:src => "//use.typekit.net/qlk1ggs.js"}
-    %script{:src => "../js/prefixfree.js"}
+    %link{:href => "../styles/css/main.css", :media => "screen", :rel => "stylesheet"}/
+    %link{:href => "//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/monokai_sublime.min.css"}/
+    %script{:src => "//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"}/
+    %script{:src => "//use.typekit.net/qlk1ggs.js"}/
+    %script
+      hljs.initHighlightingOnLoad();
     :javascript
       try{Typekit.load();}catch(e){}
 
