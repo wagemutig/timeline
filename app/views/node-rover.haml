@@ -7,7 +7,7 @@
       %img{:src => "../img/node-rover_cover.png", :alt => "Node-Rover Cover", :class => "project__cover"}
     %article.project__article
       %p.article__paragraph
-        Seitan Williamsburg mlkshk, tilde freegan stumptown locavore letterpress Pitchfork. Organic fixie pour-over fashion axe, umami Tumblr Kickstarter raw denim Schlitz Odd Future quinoa jean shorts. Dreamcatcher aesthetic tote bag cliche Odd Future migas bitters hoodie skateboard church-key distillery.
+        Node-Rover ist ein voll funktionsfähiger, teilautonomer Roboter der mit jedem vorstellbaren Web-fähigen Device von MacBook bis iPhone gesteuert werden kann. Dabei kommuniziert der Client – zum Beispiel ein iPhone – über einen Node.js Server mit dem Node-Rover. Der Node-Rover ist extrem reaktiv. Mittels der Raupen kann er sich selbst über Hindernisse bewegen, die Klaue erlaubt es ihm Gegenstände zu greifen und gar zu Transportieren. Ausserdem ist ein zweiachsig steuerbarer Kameraturm installiert. Auch die Server-Technologie zum Video-Stream steht bereit, leider reichte das Budget nicht mehr für eine IP-Kamera. Dies macht aber die Twitter-Integration wett.
 
   %main
     %section.project__section
@@ -15,7 +15,7 @@
         %h3.section__title
           Trello Board
         %p.article__paragraph
-          Seitan Williamsburg mlkshk, tilde freegan stumptown locavore letterpress Pitchfork. Organic fixie pour-over fashion axe, umami Tumblr Kickstarter raw denim Schlitz Odd Future quinoa jean shorts. Dreamcatcher aesthetic tote bag cliche Odd Future migas bitters hoodie skateboard church-key distillery.
+          Als Team von fünf Studenten unterschiedlichster Backgrounds waren wir uns bewusst, dass Kollaboration und Kommunikation über den Erfolg des Projekts entscheiden würden. So entschieden wir uns nebst dem Version Control System Github auch die Agile Kanban Boards der Web App Trello zu nutzen. Ein guter Entscheid!
       %img{:src => "../img/node-rover_trello.png", :alt => "Node-Rover Trello Board", :class => "section__image"}
 
     %section.project__section
@@ -23,7 +23,7 @@
         %h3.section__title
           Wireframes
         %p.article__paragraph
-          Seitan Williamsburg mlkshk, tilde freegan stumptown locavore letterpress Pitchfork. Organic fixie pour-over fashion axe, umami Tumblr Kickstarter raw denim Schlitz Odd Future quinoa jean shorts. Dreamcatcher aesthetic tote bag cliche Odd Future migas bitters hoodie skateboard church-key distillery.
+          Dank intensivster Recherche und Explorations-Phase und dem Testen verschiedenster Ferngesteuerter Spielzeuge war mir rasch klar wie die Benutzeroberfläche des Node-Rover RC GUI (Remote Control Graphic User Interface) sich anzufühlen hat und ich zeichnete einen ersten Mockup in Sketch.
       %img{:src => "../img/node-rover_wireframes.png", :alt => "Node-Rover Wireframes", :class => "section__image"}
 
     %section.project__section
@@ -31,22 +31,15 @@
         %h3.section__title
           Mockup
         %p.article__paragraph
-          Seitan Williamsburg mlkshk, tilde freegan stumptown locavore letterpress Pitchfork. Organic fixie pour-over fashion axe, umami Tumblr Kickstarter raw denim Schlitz Odd Future quinoa jean shorts. Dreamcatcher aesthetic tote bag cliche Odd Future migas bitters hoodie skateboard church-key distillery.
+          Das Mockup hielt sich weitestgehend ans Wireframe, allerdings entschied das Team meinen Vorschlag keine Pixelgrafiken zu verwenden zu implementieren. Dies sollte sich später als erheblichen Mehraufwand für mich herausstellen. Hat sich aber gelohnt!
       %img{:src => "../img/node-rover_mockups.png", :alt => "Node-Rover Mockup", :class => "section__image"}
-
-    %section.project__section
-      %article.project__article
-        %h3.section__title
-          Mockup
-        %p.article__paragraph
-          Seitan Williamsburg mlkshk, tilde freegan stumptown locavore letterpress Pitchfork. Organic fixie pour-over fashion axe, umami Tumblr Kickstarter raw denim Schlitz Odd Future quinoa jean shorts. Dreamcatcher aesthetic tote bag cliche Odd Future migas bitters hoodie skateboard church-key distillery.
 
     %section.project__section
       %article.project__article
         %h3.section__title
           Code
         %p.article__paragraph
-          Seitan Williamsburg mlkshk, tilde freegan stumptown locavore letterpress Pitchfork. Organic fixie pour-over fashion axe, umami Tumblr Kickstarter raw denim Schlitz Odd Future quinoa jean shorts. Dreamcatcher aesthetic tote bag cliche Odd Future migas bitters hoodie skateboard church-key distillery.
+          Nebst der Robotik und Elektronik lebt der Node-Rover gerade eben vom Code. Wir konnten uns auf relativ ausgereifte Libraries wie Johnny5 verlassen. Jedoch stiessen wir damit an als wenn es darum ging den Node-Rover kabellos zu steuern. So implementierten wir die benötigten Teile aus der Johnny5 Library eben in Arduino Flavour C und lernten so nebenbei noch eine neue Programmiersprache. So lag der Serielle Code nun auf dem Arduino selbst und der Server steuerte nur noch die Kommunikation. Hier noch etwas mehr zum Code dieses Projekts. Selbstverständlich ist auch hier wieder der gesamte Source Code des Projekts frei auf Github zugänglich.
         %pre.section__code
           %code
             it('should emit forward', function(done){
@@ -58,7 +51,7 @@
             socket.emit('forward');
             });
         %p.article__paragraph
-          Seitan Williamsburg mlkshk, tilde freegan stumptown locavore letterpress Pitchfork. Organic fixie pour-over fashion axe, umami Tumblr Kickstarter raw denim Schlitz Odd Future quinoa jean shorts. Dreamcatcher aesthetic tote bag cliche Odd Future migas bitters hoodie skateboard church-key distillery.
+          Wie alle Projekte die bei der Maker Academy entstanden ist auch Node-Rover durchgehend nach den Test Driven Development  und Behaviour Driven Development Paradigmen geschrieben. Dabei stellte das Testen der Websockets eine besondere Herausforderung dar, die wir mit Mocks und Stubs lösten.
         %pre.section__code
           %code
             <g id="move-right" class="control" transform="translate(120, 72)">
@@ -67,7 +60,9 @@
             <circle class="uns-control" data-action="move-right" r="30" stroke-width="0" transform="translate(10, 10)" ></circle>
             </g>
         %p.article__paragraph
-          Seitan Williamsburg mlkshk, tilde freegan stumptown locavore letterpress Pitchfork. Organic fixie pour-over fashion axe, umami Tumblr Kickstarter raw denim Schlitz Odd Future quinoa jean shorts. Dreamcatcher aesthetic tote bag cliche Odd Future migas bitters hoodie skateboard church-key distillery.
+          Für mich persönlich stellte insbesondere das Frontend eine grosse Herausforderung dar. Nebst meinem sonstigen Mitwirken am Projekt – bei Makers berührt stehts jedes Team-Mitglied alle Teile des Codes – konnte ich den Konzeptionellen, Gestalterischen wie auch den Technischen Part der Grafischen Benutzeroberfläche – RC GUI – selbst umsetzen. Wir entschieden uns getreu aktueller Web-Trends dazu keine Pixelgrafiken zu verwenden. Somit setzte ich die Icons der Benutzeroberfläche als reine SVGs, Vektorgrafiken um. Die Koordinaten habe ich meist von Hand aus der Vektor-Software Sketch in Code übersetzt.
+        %p.article__paragraph
+          Um Latenzen auf einem absoluten Minimum zu halten verwendeten wir zur Kommunikation zwischen Server, Client und Node-Rover Websockets.
         %pre.section__code
           %code
             if(b == 'o'){
@@ -82,7 +77,7 @@
             }; 
             };
         %p.article__paragraph
-          Seitan Williamsburg mlkshk, tilde freegan stumptown locavore letterpress Pitchfork. Organic fixie pour-over fashion axe, umami Tumblr Kickstarter raw denim Schlitz Odd Future quinoa jean shorts. Dreamcatcher aesthetic tote bag cliche Odd Future migas bitters hoodie skateboard church-key distillery.
+          Der Arduino Flavour C Code für die Steuerung einer der vier Antriebs-Servos.
         %pre.section__code
           %code
             if (wifly.isConnected() == false) {
@@ -94,7 +89,7 @@
             Serial.println("Failed to open");
             }
         %p.article__paragraph
-          Seitan Williamsburg mlkshk, tilde freegan stumptown locavore letterpress Pitchfork. Organic fixie pour-over fashion axe, umami Tumblr Kickstarter raw denim Schlitz Odd Future quinoa jean shorts. Dreamcatcher aesthetic tote bag cliche Odd Future migas bitters hoodie skateboard churc h-key distillery.
+          Die Integration des Wi-Fly Chips erm&ouml;glichte es uns den Node-Rover kabellos zu steuern. Gleichzeitig stellte dies die wohl gr%ouml;sste Herausforderung des Projekts dar. 
         %pre.section__code
           %code
             TwitterControl.prototype.controlFinder = function(tweet) {
@@ -104,5 +99,5 @@
             else if(tweet === 'reverse') _this.transmitToArduino('r');
             else if(tweet === 'brake') _this.transmitToArduino('s');
             };
-        %p.article__paragraph
-          Seitan Williamsburg mlkshk, tilde freegan stumptown locavore letterpress Pitchfork. Organic fixie pour-over fashion axe, umami Tumblr Kickstarter raw denim Schlitz Odd Future quinoa jean shorts. Dreamcatcher aesthetic tote bag cliche Odd Future migas bitters hoodie skateboard churc h-key distillery.
+        %p.article__paragraph 
+          Eines der Beliebtesten Features des Node-Rovers war wohl die Twitter-Integration. Ist der Server live hat der Node-Rover seinen eigenen Twitter Account und hört auf ihm zugetwitterte Befehle im Stil von @node-rover #right. Als alle im Raum ihr Smartphone hervornamen und mit etwas Verzögerung den Rover im Kollektiv navigierten das sorgte für grossen Begeisterung bei der Präsentation. 
