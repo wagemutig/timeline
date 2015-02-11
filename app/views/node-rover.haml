@@ -40,4 +40,69 @@
           Mockup
         %p.article__paragraph
           Seitan Williamsburg mlkshk, tilde freegan stumptown locavore letterpress Pitchfork. Organic fixie pour-over fashion axe, umami Tumblr Kickstarter raw denim Schlitz Odd Future quinoa jean shorts. Dreamcatcher aesthetic tote bag cliche Odd Future migas bitters hoodie skateboard church-key distillery.
-      %script{:src => "https://gist.github.com/mala23/8a191c2269ae061a0176.js"}
+
+    %section.project__section
+      %article.project__article
+        %h3.section__title
+          Code
+        %p.article__paragraph
+          Seitan Williamsburg mlkshk, tilde freegan stumptown locavore letterpress Pitchfork. Organic fixie pour-over fashion axe, umami Tumblr Kickstarter raw denim Schlitz Odd Future quinoa jean shorts. Dreamcatcher aesthetic tote bag cliche Odd Future migas bitters hoodie skateboard church-key distillery.
+        %pre.section__code
+          %code
+            it('should emit forward', function(done){
+            var socket = io.connect(url, options);
+            socket.once('forward', function(msg){
+            expect(msg).to.eql('moving forward');
+            done();
+            });
+            socket.emit('forward');
+            });
+        %p.article__paragraph
+          Seitan Williamsburg mlkshk, tilde freegan stumptown locavore letterpress Pitchfork. Organic fixie pour-over fashion axe, umami Tumblr Kickstarter raw denim Schlitz Odd Future quinoa jean shorts. Dreamcatcher aesthetic tote bag cliche Odd Future migas bitters hoodie skateboard church-key distillery.
+        %pre.section__code
+          %code
+            <g id="move-right" class="control" transform="translate(120, 72)">
+            <path d="M20.6,12.2 C18.5,13.6 15.1,14.5 11.2,14.5 C4.8,14.5 -0.4,12 -0.4,9 C-0.4,6 4.8,3.5 11.2,3.5 C14.9,3.5 18.2,4.3 20.3,5.6 L13,-0.4" id="Shape" stroke="#FFFFFF" stroke-width="2"></path>
+            <ellipse id="Oval" fill="#FFFFFF" cx="10.8" cy="8.7" rx="1.8" ry="0.7"></ellipse>
+            <circle class="uns-control" data-action="move-right" r="30" stroke-width="0" transform="translate(10, 10)" ></circle>
+            </g>
+        %p.article__paragraph
+          Seitan Williamsburg mlkshk, tilde freegan stumptown locavore letterpress Pitchfork. Organic fixie pour-over fashion axe, umami Tumblr Kickstarter raw denim Schlitz Odd Future quinoa jean shorts. Dreamcatcher aesthetic tote bag cliche Odd Future migas bitters hoodie skateboard church-key distillery.
+        %pre.section__code
+          %code
+            if(b == 'o'){
+            for(aPos; aPos < 100; aPos++) {
+            b = Serial.read();
+            if (b == 's' || b == 'l') {
+            arm.write(aPos);
+            break;
+            } 
+            arm.write(aPos);               
+            delay(15);                       
+            }; 
+            };
+        %p.article__paragraph
+          Seitan Williamsburg mlkshk, tilde freegan stumptown locavore letterpress Pitchfork. Organic fixie pour-over fashion axe, umami Tumblr Kickstarter raw denim Schlitz Odd Future quinoa jean shorts. Dreamcatcher aesthetic tote bag cliche Odd Future migas bitters hoodie skateboard church-key distillery.
+        %pre.section__code
+          %code
+            if (wifly.isConnected() == false) {
+            Serial.println("Connecting");
+            if (wifly.open(site, 1337)) {
+            Serial.println("Connected");
+            connectTime = millis();
+            } else {
+            Serial.println("Failed to open");
+            }
+        %p.article__paragraph
+          Seitan Williamsburg mlkshk, tilde freegan stumptown locavore letterpress Pitchfork. Organic fixie pour-over fashion axe, umami Tumblr Kickstarter raw denim Schlitz Odd Future quinoa jean shorts. Dreamcatcher aesthetic tote bag cliche Odd Future migas bitters hoodie skateboard churc h-key distillery.
+        %pre.section__code
+          %code
+            TwitterControl.prototype.controlFinder = function(tweet) {
+            if(tweet === 'forward') _this.transmitToArduino('w');
+            else if(tweet === 'left') _this.transmitToArduino('a');
+            else if(tweet === 'right') _this.transmitToArduino('d');
+            else if(tweet === 'reverse') _this.transmitToArduino('r');
+            else if(tweet === 'brake') _this.transmitToArduino('s');
+            };
+        %p.article__paragraph
+          Seitan Williamsburg mlkshk, tilde freegan stumptown locavore letterpress Pitchfork. Organic fixie pour-over fashion axe, umami Tumblr Kickstarter raw denim Schlitz Odd Future quinoa jean shorts. Dreamcatcher aesthetic tote bag cliche Odd Future migas bitters hoodie skateboard churc h-key distillery.

@@ -7,7 +7,7 @@
       %img{:src => "../img/lecture-voter_cover.png", :alt => "Lecture-Voter Cover", :class => "project__cover"}
     %article.project__article
       %p.article__paragraph
-        Seitan Williamsburg mlkshk, tilde freegan stumptown locavore letterpress Pitchfork. Organic fixie pour-over fashion axe, umami Tumblr Kickstarter raw denim Schlitz Odd Future quinoa jean shorts. Dreamcatcher aesthetic tote bag cliche Odd Future migas bitters hoodie skateboard church-key distillery.
+        <a href="lecture-voter.heroku.com", target="_blank"><b>Lecture-Voter</b></a> ist eine Web App, die es mehreren Usern gleichzeitig erlaubt Stimmen abzugeben. Bewertet wird die Stimmung während einer Lesung oder Schulstunde. Der laufende Graph wird dank &laquo;Bleeding edge technology&raquo; node.js und socket.io auf jedem Client in Echtzeit gezeichnet. Das Projekt demonstriert die eindrücklichn Möglichkeiten moderner Streaming-Technologien und die problemloser Skalierbarkeit Node-Basierter Web Apps. Die grösste Herausforderung stellte das Testen der Websockets dar. Entstanden ist Lecture-Voter während meiner Zeit im Web Developer Bootcamp <a href="http://www.makersacademy.com/", target="_blank"><b>Makers Academy</b></a> in London. Unser Team bestand aus vier Studenten und der Zeitrahmen dauerte vom 12. bis am 14. November 2014.
 
   %main
     %section.project__section
@@ -15,8 +15,39 @@
         %h3.section__title
           Mockups
         %p.article__paragraph
-          Seitan Williamsburg mlkshk, tilde freegan stumptown locavore letterpress Pitchfork. Organic fixie pour-over fashion axe, umami Tumblr Kickstarter raw denim Schlitz Odd Future quinoa jean shorts. Dreamcatcher aesthetic tote bag cliche Odd Future migas bitters hoodie skateboard church-key distillery.
-    %section.unsemanticMocksWrapperj
+          Von den groben, grafisch unbedeutenden Wireframes ausgehend tastete ich mich über Iterationen an die Mockups heran. Angefangen mit dem Start Screen sowie dem horizontalen und vertikalen App Screen wandte ich einen Mobile First Approach an. Parallel schrieb ich die entsprechenden Views und das CSS, die Gestaltung war ein dementsprechend organischer Prozess.
+    %section.unsemanticMocksWrapper
       %img{:src => "../img/lecture-voter_mockups01.png", :alt => "Lecture-Voter Mockups", :class => "section__mock"}
       %img{:src => "../img/lecture-voter_mockups02.png", :alt => "Lecture-Voter Mockups", :class => "section__mock"}
       %img{:src => "../img/lecture-voter_mockups03.png", :alt => "Lecture-Voter Mockups", :class => "section__mock"}
+    %section.project__section
+      %article.project__article
+        %h3.section__title
+          Code
+        %p.article__paragraph
+          Hier einige Code Snippets aus dem Projekt. Das Team arbeitete streng nach Agile und Extreme Programming Paradigmen. Der vollst&auml;ndige <a href="https://github.com/mala23/lecture-voter"><b>Source Code des Projekts</b></a> ist auf Github frei zug&auml;nglich &ndash; Open Source eben.
+        %pre.section__code
+          %code
+            it('can click start button and go to the vote page', function() {
+            browser.clickLink('#start');
+            expect(browser.location.pathname).to.equal('/vote');  
+            });
+        %p.article__paragraph
+          Wir codeten konsequent nach dem <a href="https://en.wikipedia.org/wiki/Test-driven_development" target="_blank"><b>Test Driven Development</b></a> Paradigma. Somit sind Acceptance Tests wie dieser mitunter die ersten Zeilen Code, die geschrieben wurden. Wir verwendeten die <a href="http://chaijs.com/" target="_blank"><b>Chai BDD/TDD assertion library</b></a> im expect style f&uuml;rs Unit Testing und Acceptance Testing. Den Headless Browser automatisierten wir mit <a href="http://zombie.labnotes.org/" target="_blank"><b>zombie.</b></a> 
+        %pre.section__code
+          %code
+            server.get('/vote', function (req, res) {
+            res.render('vote', { layout: 'layout'})
+            });
+        %p.article__paragraph
+          Den Server schrieben wir mit der DSL <a href="http://expressjs.com/" target="_blank"><b>express.js,</b></a> auf <a href="http://nodejs.org/" target="_blank"><b>Node.js</b></a> das Projekt ist somit komplett in JavaScript geschrieben.
+        %pre.section__code
+          %code
+            io.sockets.emit('update voter count', {countVoters: lecture.countVoters()})
+
+            voter.connection.on('userVote', function(data) {
+            var userVote = data.userVote
+            voter.addVote(new Date().getTime(), userVote)
+            lecture.updateTotalVotes(userVote)
+        %p.article__paragraph
+          Wir verwendeten <a href="http://socket.io/" target="_blank"><b>socket.io</b></a> um in Echtzeit alle Daten &uuml;ber alle Clients und den Server synchron zu halten.

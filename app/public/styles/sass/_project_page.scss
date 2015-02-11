@@ -13,7 +13,7 @@
 
   height: 15rem;
   overflow: hidden;
-  margin: 3rem 0 0 0;
+  margin: 3rem 0 3rem 0;
   position: relative;
 
 }
@@ -38,6 +38,8 @@
 
   line-height: 1.6rem;
   width: 50vw;
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
 
 }
 
@@ -51,38 +53,39 @@
 
   font-weight: 700;
   font-size: 1.6rem;
-  padding: 3rem 0 1rem 0; 
+  margin: 0;
+  padding: 0;
 
 }
 
-#cover__zeitgeist {
+.cover__zeitgeist {
 }
 
-#cover__aguacu {
+.cover__aguacu {
 
   bottom: -3vw;
 
 }
 
-#cover__migros {
+.cover__migros {
 
   bottom: -33vw;
 
 }
 
-#cover__lightbox {
+.cover__lightbox {
 
   bottom: -16vw;
 
 }
 
-#cover__lecture-voter {
+.cover__lecture-voter {
 
   bottom: -26vw;
 
 }
 
-#cover__node-rover {
+.cover__node-rover {
 
   bottom:-37vw;
 

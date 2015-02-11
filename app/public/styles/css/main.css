@@ -259,7 +259,7 @@ header h2 {
 .project__unsemanticImageWrapper {
   height: 15rem;
   overflow: hidden;
-  margin: 3rem 0 0 0;
+  margin: 3rem 0 3rem 0;
   position: relative;
 }
 
@@ -280,42 +280,45 @@ header h2 {
 .article__paragraph {
   line-height: 1.6rem;
   width: 50vw;
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
 }
 
-/* line 44, ../sass/_project_page.scss */
+/* line 46, ../sass/_project_page.scss */
 .project__section {
   margin: 3rem 0;
 }
 
-/* line 50, ../sass/_project_page.scss */
+/* line 52, ../sass/_project_page.scss */
 .section__title {
   font-weight: 700;
   font-size: 1.6rem;
-  padding: 3rem 0 1rem 0;
+  margin: 0;
+  padding: 0;
 }
 
-/* line 61, ../sass/_project_page.scss */
-#cover__aguacu {
+/* line 64, ../sass/_project_page.scss */
+.cover__aguacu {
   bottom: -3vw;
 }
 
-/* line 67, ../sass/_project_page.scss */
-#cover__migros {
+/* line 70, ../sass/_project_page.scss */
+.cover__migros {
   bottom: -33vw;
 }
 
-/* line 73, ../sass/_project_page.scss */
-#cover__lightbox {
+/* line 76, ../sass/_project_page.scss */
+.cover__lightbox {
   bottom: -16vw;
 }
 
-/* line 79, ../sass/_project_page.scss */
-#cover__lecture-voter {
+/* line 82, ../sass/_project_page.scss */
+.cover__lecture-voter {
   bottom: -26vw;
 }
 
-/* line 85, ../sass/_project_page.scss */
-#cover__node-rover {
+/* line 88, ../sass/_project_page.scss */
+.cover__node-rover {
   bottom: -37vw;
 }
 
@@ -331,8 +334,17 @@ header h2 {
 }
 
 /* line 14, ../sass/_mockups.scss */
-.section__mock {
+.unsemanticMocksWrapper img.section__mock {
   background-color: white;
+  margin: 3rem auto;
+}
+
+/* ---------------------------------
+    Code Snippets
+--------------------------------- */
+/* line 5, ../sass/_code_snippets.scss */
+.section__code {
+  width: 80vw;
 }
 
 /* ---------------------------------
