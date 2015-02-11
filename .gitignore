@@ -1,6 +1,10 @@
 ## Images
 /app/public/img
 
+##Sass Stuff
+.sass-cache
+*.css.map
+
 ## Vim Stuff
 [._]*.s[a-w][a-z]
 [._]s[a-w][a-z]
