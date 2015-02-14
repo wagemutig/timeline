@@ -15,7 +15,7 @@
         %h3.section__title
           Wireframes
         %p.article__paragraph
-          Von den groben, grafisch unbedeutenden Wireframes ausgehend tastete ich mich über Iterationen an die Mockups heran. Angefangen mit dem Start Screen sowie dem horizontalen und vertikalen App Screen wandte ich einen Mobile First Approach an. Parallel schrieb ich die entsprechenden Views und das CSS, die Gestaltung war ein dementsprechend organischer Prozess.
+          Die beiden Wireframes vom Start Screen und der eigentlichen App entstanden ganz zu Beginn des Projekts. Sie dienten dann auch bei Gestaltung und Programmierung als visuelle Vorlagen.Sinn der Wireframes ist die Erkundung der Informationsstruktur. Allf&auml;llige Fehler oder vergessene Elemente springen bei diesem Schritt sofort ins Auge. Ausserdem k&ouml;nnen sich dank der Wireframes jeder Zeit alle Teammitglieder ein inhaltlich vollst&auml;ndiges Bild vom Endprodukt machen.
       %img{:src => "../img/lecture-voter_wireframes.png", :alt => "Lecture-Voter Wireframes"}
 
     %section.project__section
@@ -23,7 +23,7 @@
         %h3.section__title
           Mockups
         %p.article__paragraph
-          Von den groben, grafisch unbedeutenden Wireframes ausgehend tastete ich mich über Iterationen an die Mockups heran. Angefangen mit dem Start Screen sowie dem horizontalen und vertikalen App Screen wandte ich einen Mobile First Approach an. Parallel schrieb ich die entsprechenden Views und das CSS, die Gestaltung war ein dementsprechend organischer Prozess.
+          Von den groben Wireframes ausgehend tastete ich mich über Iterationen an die Mockups heran. Angefangen mit dem Start Screen sowie dem horizontalen und vertikalen App Screen wandte ich einen Mobile First Approach an. Parallel schrieb ich die entsprechenden Views und das CSS, die Gestaltung war ein dementsprechend organischer Prozess.
     %section.unsemanticMocksWrapper
       %img{:src => "../img/lecture-voter_mockups01.png", :alt => "Lecture-Voter Mockups", :class => "section__mock"}
       %img{:src => "../img/lecture-voter_mockups02.png", :alt => "Lecture-Voter Mockups", :class => "section__mock"}
@@ -60,3 +60,10 @@
             lecture.updateTotalVotes(userVote)
         %p.article__paragraph
           Wir verwendeten <a href="http://socket.io/" target="_blank"><b>socket.io</b></a> um in Echtzeit alle Daten &uuml;ber alle Clients und den Server synchron zu halten.
+
+    %section.project__section
+      %article.project__article
+        %h3.section__title
+          Responsiveness
+        %p.article__paragraph
+          Bei meinen Gestaltungen für den Bildschirm halte ich mich üblicherweise an einen «Mobile First Approach». Auch beim Lecture-Voter gestalteten und entwickelten wir die App vom Mobile ausgehend. Das Endprodukt funktioniert jedoch auf allen erdenklichen Bildschirmgrössen. Bei diesem Projekt ist dies besonders wichtig, da viele Clients auf mobilen Geräten mit kleinen Bildschirmen die App benutzen, während ein Projektor oder grosser Bildschirm den wandernden Grafen dem Saal präsentiert.
