@@ -4,6 +4,7 @@
       %img{:src => "../img/node-rover_cover.png", :alt => "Node-Rover Cover", :class => "project__cover cover__node-rover"}
     %a{:href => '/', :class => "close__project"}
       &times;
+    %div.close__background
     %h1 Node-Rover
     %article.project__article
       %p.article__paragraph
@@ -50,6 +51,7 @@
           Nebst der Robotik und Elektronik lebt der Node-Rover gerade eben vom Code. Wir konnten uns auf relativ ausgereifte Libraries wie Johnny5 verlassen. Jedoch stiessen wir damit an als wenn es darum ging den Node-Rover kabellos zu steuern. So implementierten wir die benötigten Teile aus der <href="https://github.com/rwaldron/johnny-five", target="_blank"><b>Johnny5</b></a> Library eben in Arduino Flavour C und lernten so nebenbei noch eine neue Programmiersprache. So lag der Serielle Code nun auf dem <a href="http://www.arduino.cc/", target="_blank"><b>Arduino</b></a> selbst und der Server steuerte nur noch die Kommunikation. Hier noch etwas mehr zum Code dieses Projekts. Selbstverständlich ist auch hier wieder der gesamte Source Code des Projekts frei auf Github zugänglich.
         %pre.section__code
           %code
+          :preserve
             it('should emit forward', function(done){
             var socket = io.connect(url, options);
             socket.once('forward', function(msg){
@@ -62,6 +64,7 @@
           Wie alle Projekte die bei der Maker Academy entstanden ist auch Node-Rover durchgehend nach den Test Driven Development  und Behaviour Driven Development Paradigmen geschrieben. Dabei stellte das Testen der Websockets eine besondere Herausforderung dar, die wir mit <a href="https://en.wikipedia.org/wiki/Mock_object", target="_blank"><b>Mocks und Stubs</b></a> lösten.
         %pre.section__code
           %code
+          :preserve
             <g id="move-right" class="control" transform="translate(120, 72)">
             <path d="M20.6,12.2 C18.5,13.6 15.1,14.5 11.2,14.5 C4.8,14.5 -0.4,12 -0.4,9 C-0.4,6 4.8,3.5 11.2,3.5 C14.9,3.5 18.2,4.3 20.3,5.6 L13,-0.4" id="Shape" stroke="#FFFFFF" stroke-width="2"></path>
             <ellipse id="Oval" fill="#FFFFFF" cx="10.8" cy="8.7" rx="1.8" ry="0.7"></ellipse>
@@ -73,6 +76,7 @@
           Um Latenzen auf einem absoluten Minimum zu halten verwendeten wir zur Kommunikation zwischen Server, Client und Node-Rover Websockets.
         %pre.section__code
           %code
+            :preserve
             if(b == 'o'){
             for(aPos; aPos < 100; aPos++) {
             b = Serial.read();
@@ -88,6 +92,7 @@
           Der Arduino Flavour C Code für die Steuerung einer der vier Antriebs-Servos.
         %pre.section__code
           %code
+          :preserve
             if (wifly.isConnected() == false) {
             Serial.println("Connecting");
             if (wifly.open(site, 1337)) {
@@ -100,6 +105,7 @@
           Die Integration des <a href="https://www.sparkfun.com/products/10822", target="_blank"><b>Wi-Fly Chips</b></a> erm&ouml;glichte es uns den Node-Rover kabellos zu steuern. Gleichzeitig stellte dies die wohl gr&ouml;sste Herausforderung des Projekts dar. 
         %pre.section__code
           %code
+          :preserve
             TwitterControl.prototype.controlFinder = function(tweet) {
             if(tweet === 'forward') _this.transmitToArduino('w');
             else if(tweet === 'left') _this.transmitToArduino('a');
