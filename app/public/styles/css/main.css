@@ -329,27 +329,32 @@ header h2 {
   font-size: 1.3rem;
 }
 
-/* line 76, ../sass/_project_page.scss */
+/* line 73, ../sass/_project_page.scss */
+.cover__zeitgeist {
+  bottom: -28vw;
+}
+
+/* line 79, ../sass/_project_page.scss */
 .cover__aguacu {
   bottom: -3vw;
 }
 
-/* line 82, ../sass/_project_page.scss */
+/* line 85, ../sass/_project_page.scss */
 .cover__migros {
   bottom: -33vw;
 }
 
-/* line 88, ../sass/_project_page.scss */
+/* line 91, ../sass/_project_page.scss */
 .cover__lightbox {
   bottom: -16vw;
 }
 
-/* line 94, ../sass/_project_page.scss */
+/* line 97, ../sass/_project_page.scss */
 .cover__lecture-voter {
   bottom: -6vw;
 }
 
-/* line 100, ../sass/_project_page.scss */
+/* line 103, ../sass/_project_page.scss */
 .cover__node-rover {
   bottom: -37vw;
 }
