@@ -5,7 +5,6 @@
 *, *:before, *:after {
 
   box-sizing: border-box;
-  -webkit-overflow-scrolling: touch;
 
 }
 
@@ -45,6 +44,7 @@ body a {
 main {
 
   margin: 0 auto;
+  -webkit-overflow-scrolling: touch;
 
 }
 
