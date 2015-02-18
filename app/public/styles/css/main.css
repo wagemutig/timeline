@@ -33,12 +33,12 @@ body a {
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
-/* line 44, ../sass/_global.scss */
+/* line 45, ../sass/_global.scss */
 main {
   margin: 0 auto;
-  -webkit-overflow-scrolling: touch;
 }
 
 /* line 51, ../sass/_global.scss */

@@ -38,13 +38,13 @@ body a {
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 
 }
 
 main {
 
   margin: 0 auto;
-  -webkit-overflow-scrolling: touch;
 
 }
 
