@@ -4,6 +4,19 @@
 
 .section__code {
 
-  width: 80vw;
+  width: 100%;
+  margin: 0 auto;
+
+}
+
+code.hljs {
+
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  overflow-x: auto;
+  padding: 3rem 1rem;
+  background: #23241f;
+  line-height: 1.6rem;
 
 }

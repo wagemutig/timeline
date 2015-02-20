@@ -49,25 +49,44 @@
         <p class="article__paragraph">
           Hier einige Code Snippets aus dem Projekt. Das Team arbeitete streng nach Agile und Extreme Programming Paradigmen. Der vollständige <a href="https://github.com/mala23/lecture-voter"><b>Source Code des Projekts</b></a> ist auf Github frei zugänglich – Open Source eben.
         </p>
-        <pre class="section__code"><code>it('can click start button and go to the vote page', function() {
+      </article>
+        <pre class="section__code"><code>
+        it('can click start button and go to the vote page', function() {
         browser.clickLink('#start');
         expect(browser.location.pathname).to.equal('/vote');
-        });</code></pre>
+        });
+        </code></pre>
+      <article class="project__article">
         <p class="article__paragraph">
           Wir codeten konsequent nach dem <a href="https://en.wikipedia.org/wiki/Test-driven_development" target="_blank"><b>Test Driven Development</b></a> Paradigma. Somit sind Acceptance Tests wie dieser mitunter die ersten Zeilen Code, die geschrieben wurden. Wir verwendeten die <a href="http://chaijs.com/" target="_blank"><b>Chai BDD/TDD assertion library</b></a> im expect style fürs Unit Testing und Acceptance Testing. Den Headless Browser automatisierten wir mit <a href="http://zombie.labnotes.org/" target="_blank"><b>zombie.</b></a>
         </p>
-        <pre class="section__code"><code>server.get('/vote', function (req, res) {
-        res.render('vote', { layout: 'layout'})
-        });</code></pre>
+      </article>
+        <pre class="section__code">
+          <code>
+            server.get('/vote', function (req, res) {
+              res.render('vote', { layout: 'layout'})
+            });
+          </code>
+        </pre>
+
+      <article class="project__article">
         <p class="article__paragraph">
           Den Server schrieben wir mit der DSL <a href="http://expressjs.com/" target="_blank"><b>express.js,</b></a> auf <a href="http://nodejs.org/" target="_blank"><b>Node.js</b></a> das Projekt ist somit komplett in JavaScript geschrieben.
         </p>
-        <pre class="section__code"><code>io.sockets.emit('update voter count', {countVoters: lecture.countVoters()})
-        voter.connection.on('userVote', function(data) {
-        var userVote = data.userVote
-        voter.addVote(new Date().getTime(), userVote)
-        lecture.updateTotalVotes(userVote)</code></pre>
-        <p class="article__paragraph">
+      </article>
+        <pre class="section__code">
+          <code>
+            io.sockets.emit('update voter count', {countVoters: lecture.countVoters()})
+            voter.connection.on('userVote', function(data) {
+              var userVote = data.userVote
+              voter.addVote(new Date().getTime(), userVote)
+              lecture.updateTotalVotes(userVote)
+            }
+          </code>
+        </pre>
+
+      <article class="project__article">
+          <p class="article__paragraph">
           Wir verwendeten <a href="http://socket.io/" target="_blank"><b>socket.io</b></a> um in Echtzeit alle Daten über alle Clients und den Server synchron zu halten.
         </p>
       </article>

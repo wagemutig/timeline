@@ -1,0 +1,193 @@
+<div class='project__unsemanticContentWrapper'>
+  <header class='project__header'>
+    <div class='project__unsemanticImageWrapper' style='background-color:#333'>
+      <img alt='Node-Rover Cover' class='project__cover cover__node-rover' src='http://res.cloudinary.com/halunka/image/upload/v1424263679/node-rover%20jpg/node-rover_cover.jpg'>
+    </div>
+    <a class='close__project' href='/'>
+      &times;
+    </a>
+    <div class='close__background'></div>
+    <h1>Node-Rover</h1>
+    <article class='project__article'>
+      <p class='article__paragraph'>
+        <a href="https://github.com/Schlap/Node-Rover", target="_blank"><b>Node-Rover</b></a> ist ein voll funktionsfähiger, teilautonomer Roboter der mit jedem vorstellbaren Web-fähigen Device von MacBook bis iPhone gesteuert werden kann. Dabei kommuniziert der Client – zum Beispiel ein iPhone – über einen Node.js Server mit dem Node-Rover. Der Node-Rover ist extrem reaktiv. Mittels der Raupen kann er sich selbst über Hindernisse bewegen, die Klaue erlaubt es ihm Gegenstände zu greifen und gar zu Transportieren. Ausserdem ist ein zweiachsig steuerbarer Kameraturm installiert. Auch die Server-Technologie zum Video-Stream steht bereit, leider reichte das Budget nicht mehr für eine IP-Kamera. Dies macht aber die Twitter-Integration wett.
+      </p>
+    </article>
+  </header>
+  <main>
+    <section class='project__section'>
+      <article class='project__article'>
+        <h3 class='section__title'>
+          Trello Board
+        </h3>
+        <p class='article__paragraph'>
+          Als Team von fünf Studenten unterschiedlichster Backgrounds waren wir uns bewusst, dass Kollaboration und Kommunikation über den Erfolg des Projekts entscheiden würden. So entschieden wir uns nebst dem Version Control System Github auch die Agile Kanban Boards der Web App Trello zu nutzen. Ein guter Entscheid!
+        </p>
+      </article>
+      <img alt='Node-Rover Trello Board' class='section__image' src='http://res.cloudinary.com/halunka/image/upload/v1424263680/node-rover%20jpg/node-rover_trello.jpg'>
+    </section>
+    <section class='project__section'>
+      <article class='project__article'>
+        <h3 class='section__title'>
+          Moodboard
+        </h3>
+        <p class='article__paragraph'>
+          Als ich mit der Gestaltung der Benutzeroberfläche für den Client begann, durchsuchte ich erst das Web nach Bildern und Screenshots verschiedenster Fernsteuerungen. Ich entschied mich die Richtungstasten mit dem linken und den Kamera-Turm mit dem rechten Daumen steuerbar zu machen. Daraus ergab sich die strukturelle Ordnung der Information auf dem Screen.
+        </p>
+      </article>
+      <img alt='Node-Rover Moodboard' class='section__image' src='http://res.cloudinary.com/halunka/image/upload/v1424263680/node-rover%20jpg/node-rover_moodboard.jpg'>
+    </section>
+    <section class='project__section'>
+      <article class='project__article'>
+        <h3 class='section__title'>
+          Wireframes
+        </h3>
+        <p class='article__paragraph'>
+          Dank intensivster Recherche und Explorations-Phase und dem Testen verschiedenster Ferngesteuerter Spielzeuge war mir rasch klar wie die Benutzeroberfläche des Node-Rover RC GUI (Remote Control Graphic User Interface) sich anzufühlen hat und ich zeichnete einen ersten Wireframe in <a href="https://balsamiq.com/", target="_blank"><b>Balsamiq.</b></a>
+        </p>
+      </article>
+      <img alt='Node-Rover Wireframes' class='section__image' src='http://res.cloudinary.com/halunka/image/upload/v1424263679/node-rover%20jpg/node-rover_wireframes.jpg'>
+    </section>
+    <section class='project__section'>
+      <article class='project__article'>
+        <h3 class='section__title'>
+          Mockup
+        </h3>
+        <p class='article__paragraph'>
+          Das Mockup hielt sich weitestgehend ans Wireframe, allerdings entschied das Team meinen Vorschlag keine Pixelgrafiken zu verwenden zu implementieren. Dies sollte sich später als erheblichen Mehraufwand für mich herausstellen. Hat sich aber gelohnt! Der gr&uuml;ne Hintergrund w&uuml;rde sp&auml;ter durch den Live-Stream vom Kamera-Turm ersetzt werden. Deshalb hielt ich auch die Steuerelemente mit der feinen weissen Linie m&ouml;glichst minimalistisch.
+        </p>
+      </article>
+      <img alt='Node-Rover Mockup' class='section__image' src='http://res.cloudinary.com/halunka/image/upload/v1424263679/node-rover%20jpg/node-rover_mockups.jpg'>
+    </section>
+    <section class='project__section'>
+      <article class='project__article'>
+        <h3 class='section__title'>
+          Code
+        </h3>
+        <p class='article__paragraph'>
+          Nebst der Robotik und Elektronik lebt der Node-Rover gerade eben vom Code. Wir konnten uns auf relativ ausgereifte Libraries wie Johnny5 verlassen. Jedoch stiessen wir damit an als wenn es darum ging den Node-Rover kabellos zu steuern. So implementierten wir die benötigten Teile aus der <href="https://github.com/rwaldron/johnny-five", target="_blank"><b>Johnny5</b></a> Library eben in Arduino Flavour C und lernten so nebenbei noch eine neue Programmiersprache. So lag der Serielle Code nun auf dem <a href="http://www.arduino.cc/", target="_blank"><b>Arduino</b></a> selbst und der Server steuerte nur noch die Kommunikation. Hier noch etwas mehr zum Code dieses Projekts. Selbstverständlich ist auch hier wieder der gesamte Source Code des Projekts frei auf Github zugänglich.
+        </p>
+      </article>
+      <pre class="section__code">
+        <code>
+          it('should emit forward', function(done){
+            var socket = io.connect(url, options);
+            socket.once('forward', function(msg){
+            expect(msg).to.eql('moving forward');
+            done();
+            });
+            socket.emit('forward');
+          });
+        </code>
+      </pre>
+
+      <article class="project__article">
+        <p class='article__paragraph'>
+          Wie alle Projekte die bei der Maker Academy entstanden ist auch Node-Rover durchgehend nach den Test Driven Development  und Behaviour Driven Development Paradigmen geschrieben. Dabei stellte das Testen der Websockets eine besondere Herausforderung dar, die wir mit <a href="https://en.wikipedia.org/wiki/Mock_object", target="_blank"><b>Mocks und Stubs</b></a> lösten.
+        </p>
+      </article>
+      <pre class="section__code">
+        <code>
+         &lt;g id="move-right" class="control" transform="translate(120, 72)"&gt;
+            &lt;path d="M20.6,12.2 C18.5,13.6 15.1,14.5 11.2,14.5 C4.8,14.5 -0.4,12 -0.4,9 C-0.4,6 4.8,3.5 11.2,3.5 C14.9,3.5 18.2,4.3 20.3,5.6 L13,-0.4" id="Shape" stroke="#FFFFFF" stroke-width="2"&gt;&lt;/path&gt;
+            &lt;ellipse id="Oval" fill="#FFFFFF" cx="10.8" cy="8.7" rx="1.8" ry="0.7">&lt;/ellipse&gt;
+            &lt;circle class="uns-control" data-action="move-right" r="30" stroke-width="0" transform="translate(10, 10)" &gt;&lt;/circle&gt;
+          &lt;/g&gt; 
+        </code>
+      </pre>
+
+      <article class="project__article">
+        <p class='article__paragraph'>
+          Für mich persönlich stellte insbesondere das Frontend eine grosse Herausforderung dar. Nebst meinem sonstigen Mitwirken am Projekt – bei Makers berührt stehts jedes Team-Mitglied alle Teile des Codes – konnte ich den Konzeptionellen, Gestalterischen wie auch den Technischen Part der Grafischen Benutzeroberfläche – <a href="https://github.com/mala23/rc-gui", target="_blank"><b>RC GUI</b></a> – selbst umsetzen. Wir entschieden uns getreu aktueller Web-Trends dazu keine Pixelgrafiken zu verwenden. Somit setzte ich die Icons der Benutzeroberfläche als reine SVGs, Vektorgrafiken um. Die Koordinaten habe ich meist von Hand aus der Vektor-Software <a href="http://bohemiancoding.com/sketch/", target="_blank"><b>Sketch</b></a> in Code übersetzt.
+        </p>
+        <p class='article__paragraph'>
+          Um Latenzen auf einem absoluten Minimum zu halten verwendeten wir zur Kommunikation zwischen Server, Client und Node-Rover Websockets.
+        </p>
+      </article>
+
+      <pre class="section__code">
+        <code>
+          if(b == 'o'){
+
+            for(aPos; aPos < 100; aPos++) {
+
+              b = Serial.read();
+
+              if (b == 's' || b == 'l') {
+                arm.write(aPos);
+                break;
+              } 
+
+              arm.write(aPos);               
+              delay(15);                       
+            }; 
+          };
+        </code>
+      </pre>
+
+      <article class="project__article">
+        <p class="article__paragraph">
+          Der Arduino Flavour C Code für die Steuerung einer der vier Antriebs-Servos.
+        </p>
+      </article>
+
+      <pre class="section__code">
+        <code>
+          if (wifly.isConnected() == false) {
+
+            Serial.println("Connecting");
+
+            if (wifly.open(site, 1337)) {
+              Serial.println("Connected");
+              connectTime = millis();
+            } else {
+              Serial.println("Failed to open");
+          }
+        </code>
+      </pre>
+
+      <article class="project__article">
+        <p class="article__paragraph">
+          Die Integration des <a href="https://www.sparkfun.com/products/10822", target="_blank"><b>Wi-Fly Chips</b></a> erm&ouml;glichte es uns den Node-Rover kabellos zu steuern. Gleichzeitig stellte dies die wohl gr&ouml;sste Herausforderung des Projekts dar.
+        </p>
+      </article>
+
+      <pre class="section__code">
+        <code>
+          TwitterControl.prototype.controlFinder = function(tweet) {
+            if(tweet === 'forward') _this.transmitToArduino('w');
+            else if(tweet === 'left') _this.transmitToArduino('a');
+            else if(tweet === 'right') _this.transmitToArduino('d');
+            else if(tweet === 'reverse') _this.transmitToArduino('r');
+            else if(tweet === 'brake') _this.transmitToArduino('s');
+          };
+        </code>
+      </pre>
+
+      <article class="project__article">
+        <p class="article__paragraph">
+          Eines der Beliebtesten Features des Node-Rovers war wohl die Twitter-Integration. Ist der Server live hat der Node-Rover seinen eigenen Twitter Account und hört auf ihm zugetwitterte Befehle im Stil von &laquo;@node-rover #right&raquo;. Als alle im Raum ihr Smartphone hervornamen und mit etwas Verzögerung den Rover im Kollektiv navigierten das sorgte für grossen Begeisterung bei der Präsentation.
+        </p>
+      </article>
+    </section>
+
+<section class='project__section'>
+  <article class='project__article'>
+    <h3 class='section__title'>
+      Responsiveness
+    </h3>
+    <p class='article__paragraph'>
+      Von Beginn an war klar, dass der Node-Rover mittels dem Client, der auf einem Smartphone läuft gesteuert würde. Somit machte ein «Mobile First Approach|» bei der Konzeption und Umsetzung des Front-Ends umso mehr Sinn. Dank der vollständig Vektorbasierten Benutzeroberfläche funktioniert die App auf jedem erdenklichen Bildschirm.
+    </p>
+  </article>
+  <img alt='Node-Rover Responsiveness' class='section__image' src='http://res.cloudinary.com/halunka/image/upload/v1424263680/node-rover%20jpg/node-rover_responsiveness.jpg'>
+<section class='project__end'>
+
+  <a class='timeline__link' href='/'>
+    Zur&uuml;ck zur Timeline
+  </a>
+</section>
+
+  </main>
+</div>
+

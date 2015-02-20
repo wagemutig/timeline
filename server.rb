@@ -1,6 +1,5 @@
 require 'bundler/setup'
 require 'sinatra'
-require 'haml'
 
 class TL < Sinatra::Base
 
@@ -12,31 +11,37 @@ get '/' do
 end
 
 get '/timeline' do
-  haml :timeline
+  erb :timeline
 end
 
 get '/gbm/zeitgeist' do
-  haml :zeitgeist
+  erb :zeitgeist
 end
 
 get '/gbm/aguacu' do
-  haml :aguacu
+  erb :aguacu
 end
 
 get '/oi/migros' do
-  haml :migros
+  erb :migros
 end
 
 get '/oi/lightbox' do
-  haml :lightbox
+  erb :lightbox
 end
 
 get '/ma/lecture-voter' do
-  haml :'lecture-voter'
+  erb :'lecture-voter'
 end
 
 get '/ma/node-rover' do
-  haml :'node-rover'
+  erb :'node-rover'
+end
+
+get "/stylesheets/screen.css" do
+  content_type 'text/css'
+  response['Expires'] = (Time.now + 60*60*24*356*3).httpdate
+  sass :"styles/sass"
 end
 
   #start the server if ruby file executed directly
