@@ -4,9 +4,11 @@
 
 .timeline {
 
-  overflow: hidden;
   position: relative;
   padding: 3rem 0 0 0;
+  float: left;
+  width: 100%;
+  margin: 0;
 
 }
 
@@ -68,6 +70,12 @@
 
 }
 
+.timeline__projects {
+
+  background-color: inherit;
+
+}
+
 .timeline__line {
 
   position: relative;
@@ -108,6 +116,33 @@
   min-height: 5rem;
   position: relative;
   margin: 5rem 0 0 0;
+  background-color: inherit;
+
+}
+
+.project__link:hover .project__bullet:after {
+
+  border-width: 20px; 
+
+}
+
+.project__link:after {
+
+  background-color: inherit;
+  height: 0;
+  width: 600vw;
+  position: absolute;
+  left: -200vw;
+  top: -200vh;
+  content: '';
+  z-index: 1;
+  transition: height 0.8s cubic-bezier(0.68, 0.52, 0.39, 1) 0s;
+
+}
+
+.project__link:active:after {
+
+  height: 600vh;
 
 }
 
@@ -143,6 +178,7 @@
   top: 50%;
   left: 50px;
   margin: -2.5rem 0 0 0;
+  transition: border 0.15s cubic-bezier(0.68, 0.52, 0.39, 1) 0s;
 
 }
 
@@ -194,5 +230,6 @@
   left: 0;
   position: absolute;
   display: block;
+  background-color: inherit;
 
 }
