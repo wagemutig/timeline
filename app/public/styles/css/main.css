@@ -456,25 +456,30 @@ code.hljs {
     Media Queries
 --------------------------------- */
 @media all and (max-width: 900px) {
-  /* line 12, ../sass/_media_queries.scss */
+  /* line 7, ../sass/_media_queries.scss */
+  .project__cover {
+    bottom: 0;
+  }
+
+  /* line 13, ../sass/_media_queries.scss */
   .section__image {
     max-width: 95%;
   }
 
-  /* line 18, ../sass/_media_queries.scss */
+  /* line 19, ../sass/_media_queries.scss */
   .project__article {
     margin-left: auto;
     margin-right: auto;
     width: 80vw;
   }
 
-  /* line 26, ../sass/_media_queries.scss */
+  /* line 27, ../sass/_media_queries.scss */
   .article__paragraph {
     width: 80vw;
   }
 }
 @media all and (max-width: 500px) {
-  /* line 37, ../sass/_media_queries.scss */
+  /* line 38, ../sass/_media_queries.scss */
   .project__cover {
     max-height: 110%;
     width: auto;
