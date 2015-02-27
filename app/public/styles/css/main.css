@@ -88,13 +88,13 @@ header h2 {
 
 /* line 40, ../sass/_header.scss */
 .close__background {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 2rem;
   height: 4rem;
   width: 3rem;
   background-color: gray;
-  z-index: 1;
+  z-index: -1;
 }
 
 /* ---------------------------------
