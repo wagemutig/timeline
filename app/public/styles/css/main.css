@@ -94,7 +94,7 @@ header h2 {
   height: 4rem;
   width: 3rem;
   background-color: gray;
-  z-index: -1;
+  z-index: 1;
 }
 
 /* ---------------------------------
