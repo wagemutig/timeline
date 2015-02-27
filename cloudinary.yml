@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: halunka
+  api_key: '827816784874243'
+  api_secret: NRwAGuXqT2fM6KpTuKwyzs3Qjw4
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: halunka
+  api_key: '827816784874243'
+  api_secret: NRwAGuXqT2fM6KpTuKwyzs3Qjw4
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: halunka
+  api_key: '827816784874243'
+  api_secret: NRwAGuXqT2fM6KpTuKwyzs3Qjw4
+  enhance_image_tag: true
+  static_image_support: false
