@@ -223,7 +223,8 @@ header h2 {
   top: -200vh;
   content: '';
   z-index: 1;
-  transition: height 0.8s cubic-bezier(0.68, 0.52, 0.39, 1) 0s;
+  -webkit-transition: height 0.8s cubic-bezier(0.68, 0.52, 0.39, 1) 0s;
+          transition: height 0.8s cubic-bezier(0.68, 0.52, 0.39, 1) 0s;
 }
 
 /* line 148, ../sass/_timeline.scss */
@@ -261,7 +262,8 @@ header h2 {
   top: 50%;
   left: 50px;
   margin: -2.5rem 0 0 0;
-  transition: border 0.15s cubic-bezier(0.68, 0.52, 0.39, 1) 0s;
+  -webkit-transition: border 0.15s cubic-bezier(0.68, 0.52, 0.39, 1) 0s;
+          transition: border 0.15s cubic-bezier(0.68, 0.52, 0.39, 1) 0s;
   background-color: inherit;
 }
 
@@ -294,7 +296,8 @@ header h2 {
   top: 50%;
   left: 50px;
   margin: -2.5rem 0 0 0;
-  transition: border 0.15s cubic-bezier(0.68, 0.52, 0.39, 1) 0s;
+  -webkit-transition: border 0.15s cubic-bezier(0.68, 0.52, 0.39, 1) 0s;
+          transition: border 0.15s cubic-bezier(0.68, 0.52, 0.39, 1) 0s;
 }
 
 /* line 227, ../sass/_timeline.scss */
@@ -314,10 +317,23 @@ header h2 {
 
 /* line 245, ../sass/_timeline.scss */
 .project__unsemanticTitleWrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 60%;
   height: 100%;
   float: left;
@@ -354,6 +370,12 @@ header h2 {
 }
 
 /* line 13, ../sass/_project_page.scss */
+.project__video {
+  max-width: 70%;
+  margin: 3rem auto 3rem auto;
+}
+
+/* line 20, ../sass/_project_page.scss */
 .project__unsemanticImageWrapper {
   height: 15rem;
   overflow: hidden;
@@ -361,7 +383,7 @@ header h2 {
   position: relative;
 }
 
-/* line 22, ../sass/_project_page.scss */
+/* line 29, ../sass/_project_page.scss */
 .project__cover {
   width: 100%;
   position: absolute;
@@ -370,7 +392,7 @@ header h2 {
   min-height: 100%;
 }
 
-/* line 32, ../sass/_project_page.scss */
+/* line 39, ../sass/_project_page.scss */
 .project__article {
   margin-left: auto;
   text-align: left;
@@ -378,7 +400,7 @@ header h2 {
   width: 50vw;
 }
 
-/* line 42, ../sass/_project_page.scss */
+/* line 49, ../sass/_project_page.scss */
 .article__paragraph {
   line-height: 1.6rem;
   width: 50vw;
@@ -386,12 +408,12 @@ header h2 {
   margin-bottom: 3rem;
 }
 
-/* line 51, ../sass/_project_page.scss */
+/* line 58, ../sass/_project_page.scss */
 .project__section {
   margin: 3rem 0;
 }
 
-/* line 57, ../sass/_project_page.scss */
+/* line 64, ../sass/_project_page.scss */
 .section__title {
   font-weight: 700;
   font-size: 1.6rem;
@@ -399,7 +421,7 @@ header h2 {
   padding: 0;
 }
 
-/* line 66, ../sass/_project_page.scss */
+/* line 73, ../sass/_project_page.scss */
 .project__end {
   text-align: center;
   margin: 3rem 0;
@@ -407,37 +429,37 @@ header h2 {
   font-size: 1.3rem;
 }
 
-/* line 75, ../sass/_project_page.scss */
+/* line 82, ../sass/_project_page.scss */
 .cover__zeitgeist {
   bottom: -28vw;
 }
 
-/* line 81, ../sass/_project_page.scss */
+/* line 88, ../sass/_project_page.scss */
 .cover__aguacu {
   bottom: -3vw;
 }
 
-/* line 87, ../sass/_project_page.scss */
+/* line 94, ../sass/_project_page.scss */
 .cover__migros {
   bottom: -33vw;
 }
 
-/* line 93, ../sass/_project_page.scss */
+/* line 100, ../sass/_project_page.scss */
 .cover__lightbox {
   bottom: -16vw;
 }
 
-/* line 99, ../sass/_project_page.scss */
+/* line 106, ../sass/_project_page.scss */
 .cover__lecture-voter {
   bottom: -13vw;
 }
 
-/* line 105, ../sass/_project_page.scss */
+/* line 112, ../sass/_project_page.scss */
 .cover__node-rover {
   bottom: -37vw;
 }
 
-/* line 111, ../sass/_project_page.scss */
+/* line 118, ../sass/_project_page.scss */
 .cover__palantir {
   bottom: -36vw;
 }
