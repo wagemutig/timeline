@@ -1,7 +1,7 @@
 <div class="project__unsemanticContentWrapper">
   <header class="project__header">
     <div class="project__unsemanticImageWrapper" style="background-color:rgb(150, 130, 100)">
-      <img alt="Lecture-Voter Cover" class="project__cover cover__lecture-voter" src="http://res.cloudinary.com/halunka/image/upload/v1424263068/lecture-voter%20jpg/lecture-voter_cover2.jpg">
+      <img alt="Lecture-Voter Cover" class="project__cover cover__lecture-voter" src="http://res.cloudinary.com/halunka/image/upload/v1425132100/lecture-voter%20jpg/lecture-voter_responsiveness.jpg">
     </div>
     <a class="close__project" href="/">
       ×
@@ -10,7 +10,7 @@
     <h1>Lecture-Voter</h1>
     <article class="project__article">
       <p class="article__paragraph">
-        <a href="lecture-voter.heroku.com" ,="" target="_blank"><b>Lecture-Voter</b></a> ist eine Web App, die es mehreren Usern gleichzeitig erlaubt Stimmen abzugeben. Bewertet wird die Stimmung während einer Lesung oder Schulstunde. Der laufende Graph wird dank «Bleeding edge technology» node.js und socket.io auf jedem Client in Echtzeit gezeichnet. Das Projekt demonstriert die eindrücklichn Möglichkeiten moderner Streaming-Technologien und die problemloser Skalierbarkeit Node-Basierter Web Apps. Die grösste Herausforderung stellte das Testen der Websockets dar. Entstanden ist Lecture-Voter während meiner Zeit im Web Developer Bootcamp <a href="http://www.makersacademy.com/" ,="" target="_blank"><b>Makers Academy</b></a> in London. Unser Team bestand aus vier Studenten und der Zeitrahmen dauerte vom 12. bis am 14. November 2014.
+        <a href="http://lecture-voter.heroku.com" target="_blank"><b>Lecture-Voter</b></a> ist eine Web App, die es mehreren Usern gleichzeitig erlaubt Stimmen abzugeben. Bewertet wird die Stimmung während einer Lesung oder Schulstunde. Der laufende Graph wird dank «Bleeding edge technology» Node.js und Socket.io auf jedem Client in Echtzeit gezeichnet. Das Projekt demonstriert die eindrücklichen Möglichkeiten moderner Streaming-Technologien und die problemlose Skalierbarkeit Node-basierter Web Apps. Die grösste Herausforderung stellte das Testen der Websockets dar. Entstanden ist Lecture-Voter während meiner Zeit im Web Developer Bootcamp <a href="http://www.makersacademy.com/" target="_blank"><b>Makers Academy</b></a> in London. Unser Team bestand aus vier Studenten und der Zeitrahmen des Projekts dauerte vom 12. bis am 14. November 2014.
       </p>
     </article>
   </header>
@@ -21,7 +21,7 @@
           Wireframes
         </h3>
         <p class="article__paragraph">
-          Die beiden Wireframes vom Start Screen und der eigentlichen App entstanden ganz zu Beginn des Projekts. Sie dienten dann auch bei Gestaltung und Programmierung als visuelle Vorlagen.Sinn der Wireframes ist die Erkundung der Informationsstruktur. Allfällige Fehler oder vergessene Elemente springen bei diesem Schritt sofort ins Auge. Ausserdem können sich dank der Wireframes jeder Zeit alle Teammitglieder ein inhaltlich vollständiges Bild vom Endprodukt machen.
+          Die beiden Wireframes vom Start Screen und der eigentlichen App entstanden ganz zu Beginn des Projekts. Sie dienten dann auch bei Gestaltung und Programmierung als visuelle Vorlagen. Sinn der Wireframes ist die Erkundung der Informationsstruktur. Allfällige Fehler oder vergessene Elemente springen bei diesem Schritt sofort ins Auge. Ausserdem können sich dank der Wireframes jeder Zeit alle Teammitglieder ein inhaltlich vollständiges Bild vom Endprodukt machen.
         </p>
       </article>
       <img alt="Lecture-Voter Wireframes" class="section__image" src="http://res.cloudinary.com/halunka/image/upload/v1424263068/lecture-voter%20jpg/lecture-voter_wireframes.jpg">
@@ -32,7 +32,7 @@
           Mockups
         </h3>
         <p class="article__paragraph">
-          Von den groben Wireframes ausgehend tastete ich mich über Iterationen an die Mockups heran. Angefangen mit dem Start Screen sowie dem horizontalen und vertikalen App Screen wandte ich einen Mobile First Approach an. Parallel schrieb ich die entsprechenden Views und das CSS, die Gestaltung war ein dementsprechend organischer Prozess.
+          Von den groben Wireframes ausgehend tastete ich mich über Iterationen an die Mockups heran. Angefangen mit dem Start Screen sowie dem horizontalen und vertikalen App Screen wendete ich einen Mobile First Approach an. Parallel schrieb ich die entsprechenden Views und das CSS, die Gestaltung war ein dementsprechend organischer Prozess.
         </p>
       </article>
     </section>
@@ -47,18 +47,18 @@
           Code
         </h3>
         <p class="article__paragraph">
-          Hier einige Code Snippets aus dem Projekt. Das Team arbeitete streng nach Agile und Extreme Programming Paradigmen. Der vollständige <a href="https://github.com/mala23/lecture-voter"><b>Source Code des Projekts</b></a> ist auf Github frei zugänglich – Open Source eben.
+          Hier einige Code Snippets aus dem Projekt. Das Team arbeitete streng nach Agile und Extreme Programming Paradigmen. Der vollständige <a target="_blank" href="https://github.com/mala23/lecture-voter"><b>Source Code des Projekts</b></a> ist auf Github frei zugänglich – Open Source eben.
         </p>
       </article>
         <pre class="section__code"><code>
         it('can click start button and go to the vote page', function() {
-        browser.clickLink('#start');
-        expect(browser.location.pathname).to.equal('/vote');
+          browser.clickLink('#start');
+          expect(browser.location.pathname).to.equal('/vote');
         });
         </code></pre>
       <article class="project__article">
         <p class="article__paragraph">
-          Wir codeten konsequent nach dem <a href="https://en.wikipedia.org/wiki/Test-driven_development" target="_blank"><b>Test Driven Development</b></a> Paradigma. Somit sind Acceptance Tests wie dieser mitunter die ersten Zeilen Code, die geschrieben wurden. Wir verwendeten die <a href="http://chaijs.com/" target="_blank"><b>Chai BDD/TDD assertion library</b></a> im expect style fürs Unit Testing und Acceptance Testing. Den Headless Browser automatisierten wir mit <a href="http://zombie.labnotes.org/" target="_blank"><b>zombie.</b></a>
+          Wir codeten konsequent nach dem <a href="https://en.wikipedia.org/wiki/Test-driven_development" target="_blank"><b>Test Driven Development</b></a> Paradigma. Somit sind Acceptance Tests wie dieser mitunter die ersten Zeilen Code, die geschrieben wurden. Wir verwendeten die <a href="http://chaijs.com/" target="_blank"><b>Chai BDD/TDD assertion library</b></a> im Expect Style fürs Unit Testing und Acceptance Testing. Den Headless Browser automatisierten wir mit <a href="http://zombie.labnotes.org/" target="_blank"><b>Zombie.</b></a>
         </p>
       </article>
         <pre class="section__code">
@@ -100,7 +100,7 @@
           Bei meinen Gestaltungen für den Bildschirm halte ich mich üblicherweise an einen «Mobile First Approach». Auch beim Lecture-Voter gestalteten und entwickelten wir die App vom Mobile ausgehend. Das Endprodukt funktioniert jedoch auf allen erdenklichen Bildschirmgrössen. Bei diesem Projekt ist dies besonders wichtig, da viele Clients auf mobilen Geräten mit kleinen Bildschirmen die App benutzen, während ein Projektor oder grosser Bildschirm den wandernden Grafen dem Saal präsentiert.
         </p>
       </article>
-      <img alt="Lecture-Voter Responsiveness" class="section__image" src="http://res.cloudinary.com/halunka/image/upload/v1424263068/lecture-voter%20jpg/lecture-voter_cover2.jpg">
+      <img alt="Lecture-Voter Responsiveness" class="section__image" src="http://res.cloudinary.com/halunka/image/upload/v1425132100/lecture-voter%20jpg/lecture-voter_responsiveness.jpg">
     </section>
     <section class="project__end">
       <a class="timeline__link" href="/">
