@@ -38,6 +38,10 @@ get '/ma/node-rover' do
   erb :'node-rover'
 end
 
+get '/palantir' do
+  erb :'palantir'
+end
+
 get "/stylesheets/screen.css" do
   content_type 'text/css'
   response['Expires'] = (Time.now + 60*60*24*356*3).httpdate
